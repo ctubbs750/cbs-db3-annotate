@@ -1,0 +1,29 @@
+from pathlib import Path
+from snakemake.utils import min_version
+
+
+# Configuration
+configfile: "config/config.yaml"
+
+
+# Define modules
+module main:
+    snakefile:
+        "rules/main.smk"
+    config:
+        config
+
+
+# Load modules
+use rule * from main as main_*
+
+
+# ----------- #
+#  Workflow   #
+# ----------- #
+
+
+rule all:
+    input:
+        rules.main_all.input,
+    default_target: True

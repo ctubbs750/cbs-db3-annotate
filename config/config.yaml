@@ -1,0 +1,25 @@
+# -------------- #
+#    Workflow    #
+# -------------- #
+
+# Parameter 1
+PARAM: <e.g. filepath>
+
+
+# -------------- #
+#    Cluster     #
+# -------------- #
+
+# Resources for a job run on a cluster
+CLUSTER:
+  RESOURCES:
+    RULE_X:
+      RUNTIME: # In minutes
+      MEMORY_MB: X
+      TIME: X
+
+# Defaults - applied to all rules
+__default__:
+  account: X
+  output: workflow/logs/{rule}-{wildcards}.out
+  error: workflow/logs/{rule}-{wildcards}.out
