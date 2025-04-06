@@ -2,8 +2,25 @@
 #    Workflow    #
 # -------------- #
 
-# Parameter 1
-PARAM: <e.g. filepath>
+
+URLS:
+  ENCODE:
+    SCREEN:
+      V4:
+        CCRES: https://downloads.wenglab.org/Registry-V4/GRCh38-cCREs.bed
+        GENE_LINKS: https://downloads.wenglab.org/Human-Gene-Links.zip
+        GENE_NEAREST: https://downloads.wenglab.org/GRCh38-Closest-Genes-PC.tsv
+        CTCF_ZSCORES: https://www.encodeproject.org/files/ENCFF392IXG/@@download/ENCFF392IXG.txt.gz
+        DNASE_ZSCORES: https://www.encodeproject.org/files/ENCFF397LSK/@@download/ENCFF397LSK.txt.gz
+
+RESOURCES:
+  ENCODE: 
+    SCREEN:
+      V4:
+        /panfs/accrepfs.vampire/data/ruderferlab/projects/ctcf/resources/data/encode/screen/v4
+  GENCODE:
+    V47:
+      /panfs/accrepfs.vampire/data/ruderferlab/projects/ctcf/resources/data/gencode/v47
 
 
 # -------------- #
