@@ -2,6 +2,14 @@
 #    Workflow    #
 # -------------- #
 
+FILEPATHS:
+  INSTALL_DIRS:
+    BIN: resources/bin
+    DATA: resources/data
+  PROCESS_DIRS: 
+    TABLES: results/tables
+  BENCHMARK_DIR: workflow/benchmarks
+  LOG_DIR: workflow/logs
 
 URLS:
   ENCODE:
@@ -19,8 +27,9 @@ RESOURCES:
       V4:
         /panfs/accrepfs.vampire/data/ruderferlab/projects/ctcf/resources/data/encode/screen/v4
   GENCODE:
-    V47:
-      /panfs/accrepfs.vampire/data/ruderferlab/projects/ctcf/resources/data/gencode/v47
+    V40:
+      GTF:
+        /panfs/accrepfs.vampire/data/ruderferlab/projects/ctcf/resources/data/gencode/v40/gencode.v40.annotation.gtf.gz
 
 
 # -------------- #

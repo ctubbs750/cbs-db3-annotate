@@ -7,15 +7,15 @@ configfile: "config/config.yaml"
 
 
 # Define modules
-module main:
+module tables:
     snakefile:
-        "rules/main.smk"
+        "rules/tables.smk"
     config:
         config
 
 
 # Load modules
-use rule * from main as main_*
+use rule * from tables as tables_*
 
 
 # ----------- #
@@ -25,5 +25,5 @@ use rule * from main as main_*
 
 rule all:
     input:
-        rules.main_all.input,
+        rules.tables_all.input,
     default_target: True

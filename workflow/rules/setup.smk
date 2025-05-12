@@ -17,6 +17,14 @@ from snakemake.utils import min_version
 PARAM = Path(config["PARAM"])
 
 # ------------- #
+# Config        #
+# ------------- #
+
+# IO
+# INSTALL_DIR = config["IO_DIRS"]["INSTALL_DIR"]
+# PROCESS_DIR = config["IO_DIRS"]["PROCESS_DIR"]["STEP_1"]
+
+# ------------- #
 #     Rules     #
 # ------------- #
 

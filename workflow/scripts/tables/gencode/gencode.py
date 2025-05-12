@@ -4,10 +4,10 @@ import pandas as pd
 from gtfparse import read_gtf
 
 # Snakemake
-# GENCODE_IP = snakemake.input[0]  # type: ignore
-GENCODE_IP = "/panfs/accrepfs.vampire/data/ruderferlab/projects/ctcf/resources/data/gencode/v47/gencode.v47.basic.annotation.gtf"
-# GENCODE_OP = snakemake.output[0]  # type: ignore
-GENCODE_OP = "/data/ruderferlab/projects/ctcf/projects/cbs-db3/cbs-db3-annotate/results/tables/gencode/gencode.v47.basic.annotation.parsed.pc.longest_tx.tsv.gz"
+GENCODE_IP = snakemake.input[0]  # type: ignore
+# GENCODE_IP = "/panfs/accrepfs.vampire/data/ruderferlab/projects/ctcf/resources/data/gencode/v47/gencode.v47.basic.annotation.gtf"
+GENCODE_OP = snakemake.output[0]  # type: ignore
+# GENCODE_OP = "/data/ruderferlab/projects/ctcf/projects/cbs-db3/cbs-db3-annotate/results/tables/gencode/gencode.v47.basic.annotation.parsed.pc.longest_tx.tsv.gz"
 
 
 # ------------- #
@@ -27,7 +27,7 @@ def print_process():
 def parse_gencode() -> pd.DataFrame:
     """Parse Gencode GTF file to extract gene and transcript information."""
     # Read GTF file
-    return read_gtf(GENCODE_IP).to_pandas()
+    return read_gtf(GENCODE_IP)#.to_pandas()
 
 
 def main():
